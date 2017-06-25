@@ -1,0 +1,19 @@
+{
+  "name": "practicesession",
+  "version": "1.0.0",
+  "description": "For practice",
+  "main": "learning.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pragati3590/Practice.git"
+  },
+  "author": "Pragati Agrawal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pragati3590/Practice/issues"
+  },
+  "homepage": "https://github.com/Pragati3590/Practice#readme"
+}

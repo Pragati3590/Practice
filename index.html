@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+
+
+<div  ng-controller="customersCtrl"> 
+<label>Name <input type="text" name="" value="" ng-model="myUser.name"></label></br>
+<label>Country <input type="text" name="" value="" ng-model="myUser.country"></label></br>
+<label>Reason for joining<input type="text" name="" value="" ng-model="myUser.reason"></label></br>
+<label>Language <input type="text" name="" value="" ng-model="myUser.lang"></label></br>
+<button ng-click="myfunction()">Submit</button>
+
+{{myUser}}
+
+<table>
+<thead ng-if="usersList.length">
+<tr>
+<th>Name</th>
+<th>Country</th>
+<th>Reason</th>
+<th>Language</th>
+</tr></thead>
+	<tr ng-repeat="x in usersList ">
+    <td >{{x.name }}</td>
+    <td >{{x.country }}</td>
+    <td >{{x.reason }}</td>
+    <td >{{x.lang }}</td>
+  </tr>
+
+  
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope) {
+$scope.myUser ={};
+$scope.usersList = [];
+$scope.myfunction=function()
+{
+console.log($scope.myUser);
+
+if(Object.keys($scope.myUser).length>0)
+$scope.usersList.push($scope.myUser);
+$scope.myUser={};
+}
+});
+</script>
+
+</body>
+</html>
